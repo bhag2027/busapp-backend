@@ -119,6 +119,19 @@ app.post("/login",(req,res)=>{
             }
         )
     })
+
+    app.post("/viewbus",(req,res)=>{
+        busmodel.find().then(
+            (data)=>{
+                res.json(data)
+            }
+        ).catch(
+            (error)=>{
+                res.json(error)
+            }
+        )
+        
+    })
     
 
 
